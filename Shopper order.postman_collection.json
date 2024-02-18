@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "5eac2359-d66d-49e5-931a-e9500995446f",
+		"name": "Shopper order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "place order from cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzMxNzg5OSwiaWF0IjoxNjk3MjgxODk5fQ.8rTEIf0HdkkQ_zl2tZEynJaXWWoQyqdNuNpgru9bxCw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"address\": {\r\n    \"addressId\": 3713,\r\n    \"buildingInfo\": \"near G.M. Temple\",\r\n    \"city\": \"pune\",\r\n    \"country\": \"india\",\r\n    \"landmark\": \"pune\",\r\n    \"name\": \"harsh\",\r\n    \"phone\": \"7517096590\",\r\n    \"pincode\": \"432102\",\r\n    \"state\": \"Maharashtra\",\r\n    \"streetInfo\": \"FC road\",\r\n    \"type\": \"home\"\r\n  },\r\n  \"paymentMode\": \"COD\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/orders",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "place order from cart",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": {\r\n    \"addressId\": 3713,\r\n    \"buildingInfo\": \"near G.M. Temple\",\r\n    \"city\": \"pune\",\r\n    \"country\": \"india\",\r\n    \"landmark\": \"pune\",\r\n    \"name\": \"harsh\",\r\n    \"phone\": \"7517096590\",\r\n    \"pincode\": \"432102\",\r\n    \"state\": \"Maharashtra\",\r\n    \"streetInfo\": \"FC road\",\r\n    \"type\": \"home\"\r\n  },\r\n  \"paymentMode\": \"COD\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/orders",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"shoppers",
+								"7757",
+								"orders"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:07:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Created\",\n    \"data\": {\n        \"orderId\": 1757,\n        \"shopperId\": 7757,\n        \"orderStatus\": \"PLACED\",\n        \"address\": {\n            \"addressId\": 3713,\n            \"name\": \"vaibhav\",\n            \"type\": \"Home\",\n            \"buildingInfo\": \"near G.M. Temple\",\n            \"streetInfo\": \"FC ROAD\",\n            \"landmark\": \"Pune\",\n            \"city\": \"Pune\",\n            \"state\": \"432102\",\n            \"country\": \"India\",\n            \"pincode\": \"432102\",\n            \"phone\": \"7517096590\"\n        },\n        \"orderedItems\": [\n            {\n                \"itemId\": 14612,\n                \"productId\": 4,\n                \"quantity\": 3,\n                \"productName\": \"Skinny Men Blue Jeans\",\n                \"imageLink\": \"https://rukminim1.flixcart.com/image/452/542/ktd9mkw0/jean/b/j/0/32-65504-0564-levi-s-original-imag6q2ss3tfzce5.jpeg?q=50\",\n                \"price\": 0,\n                \"productLink\": \"/products/4\"\n            }\n        ],\n        \"orderDate\": \"2023-10-12T08:37:51.942006\",\n        \"lastModifiedDate\": \"2023-10-12T08:37:51.942007\",\n        \"deliveredDate\": null,\n        \"actualPrice\": 0,\n        \"discountPrice\": 0,\n        \"totalPrice\": 0,\n        \"paymentMode\": \"COD\",\n        \"transactionId\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Display order history",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/orders",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Display order history",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/orders",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"shoppers",
+								"7757",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:08:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"orderId\": 1757,\n            \"shopperId\": 7757,\n            \"orderStatus\": \"PLACED\",\n            \"address\": {\n                \"addressId\": 3713,\n                \"name\": \"vaibhav\",\n                \"type\": \"Home\",\n                \"buildingInfo\": \"near G.M. Temple\",\n                \"streetInfo\": \"FC ROAD\",\n                \"landmark\": \"Pune\",\n                \"city\": \"Pune\",\n                \"state\": \"432102\",\n                \"country\": \"India\",\n                \"pincode\": \"432102\",\n                \"phone\": \"7517096590\"\n            },\n            \"orderedItems\": [\n                {\n                    \"itemId\": 14612,\n                    \"productId\": 4,\n                    \"quantity\": 3,\n                    \"productName\": \"Skinny Men Blue Jeans\",\n                    \"imageLink\": \"https://rukminim1.flixcart.com/image/452/542/ktd9mkw0/jean/b/j/0/32-65504-0564-levi-s-original-imag6q2ss3tfzce5.jpeg?q=50\",\n                    \"price\": 0,\n                    \"productLink\": \"/products/4\"\n                }\n            ],\n            \"orderDate\": \"2023-10-12T08:37:51.942\",\n            \"lastModifiedDate\": \"2023-10-12T08:37:51.942\",\n            \"deliveredDate\": null,\n            \"actualPrice\": 0,\n            \"discountPrice\": 0,\n            \"totalPrice\": 0,\n            \"paymentMode\": \"COD\",\n            \"transactionId\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update order status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/orders/1757?status=DELIVERED",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"orders",
+						"1757"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "DELIVERED"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update order status",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/orders/1757?status=DELIVERED",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"shoppers",
+								"7757",
+								"orders",
+								"1757"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "DELIVERED"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:10:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"orderId\": 1757,\n        \"shopperId\": 7757,\n        \"orderStatus\": \"DELIVERED\",\n        \"address\": {\n            \"addressId\": 3713,\n            \"name\": \"vaibhav\",\n            \"type\": \"Home\",\n            \"buildingInfo\": \"near G.M. Temple\",\n            \"streetInfo\": \"FC ROAD\",\n            \"landmark\": \"Pune\",\n            \"city\": \"Pune\",\n            \"state\": \"432102\",\n            \"country\": \"India\",\n            \"pincode\": \"432102\",\n            \"phone\": \"7517096590\"\n        },\n        \"orderedItems\": [\n            {\n                \"itemId\": 14612,\n                \"productId\": 4,\n                \"quantity\": 3,\n                \"productName\": \"Skinny Men Blue Jeans\",\n                \"imageLink\": \"https://rukminim1.flixcart.com/image/452/542/ktd9mkw0/jean/b/j/0/32-65504-0564-levi-s-original-imag6q2ss3tfzce5.jpeg?q=50\",\n                \"price\": 0,\n                \"productLink\": \"/products/4\"\n            }\n        ],\n        \"orderDate\": \"2023-10-12T08:37:51.942\",\n        \"lastModifiedDate\": \"2023-10-12T08:40:15.644521\",\n        \"deliveredDate\": null,\n        \"actualPrice\": 0,\n        \"discountPrice\": 0,\n        \"totalPrice\": 0,\n        \"paymentMode\": \"COD\",\n        \"transactionId\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Generate Invoice copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7557/orders/1757/invoice",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7557",
+						"orders",
+						"1757",
+						"invoice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

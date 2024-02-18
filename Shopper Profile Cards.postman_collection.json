@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "42e4afbc-391b-4274-a111-98396424102a",
+		"name": "Shopper Profile Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Save the card data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cvv\": \"250\",\r\n  \"expiryDate\": \"28/10\",\r\n  \"id\": 890,\r\n  \"nameOnCard\": \"vaibhav\",\r\n  \"number\": \"5014401191606589\",\r\n  \"type\": \"CREDIT\",\r\n  \"userId\":7757\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/cards",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"cards"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Save the card data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cvv\": \"250\",\r\n  \"expiryDate\": \"28/10\",\r\n  \"id\": 890,\r\n  \"nameOnCard\": \"vaibhav\",\r\n  \"number\": \"5014401191606589\",\r\n  \"type\": \"CREDIT\",\r\n  \"userId\":7757\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/cards",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"cards"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:36:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Created\",\n    \"data\": {\n        \"id\": 342,\n        \"number\": \"5014401191606589\",\n        \"cvv\": \"250\",\n        \"nameOnCard\": \"vaibhav\",\n        \"expiryDate\": \"28/10\",\n        \"type\": \"CREDIT\",\n        \"userId\": 7757\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get the card data based on type",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/cards/7757?type=CREDIT",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"cards",
+						"7757"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "CREDIT"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get the card data based on type",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/cards/7757?type=CREDIT",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"cards",
+								"7757"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "CREDIT"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:37:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 342,\n            \"number\": \"5014401191606589\",\n            \"cvv\": \"250\",\n            \"nameOnCard\": \"vaibhav\",\n            \"expiryDate\": \"28/10\",\n            \"type\": \"CREDIT\",\n            \"userId\": 7757\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Returns all the shoppers cards",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/cards?cardType=CREDIT&shopperId=7757",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "cardType",
+							"value": "CREDIT"
+						},
+						{
+							"key": "shopperId",
+							"value": "7757"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Returns all the shoppers cards",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/shoppers/cards?cardType=CREDIT&shopperId=7757",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"shoppers",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "cardType",
+									"value": "CREDIT"
+								},
+								{
+									"key": "shopperId",
+									"value": "7757"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:37:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"cardId\": 890,\n            \"shopperId\": 7757,\n            \"email\": \"vaibhavdindokar28@gmail.com\",\n            \"number\": \"5014401191606589\",\n            \"cardType\": \"CREDIT\",\n            \"cvv\": 250,\n            \"pin\": 6755,\n            \"expiryDate\": \"10/28\",\n            \"nameOnCard\": \"vaibhav\",\n            \"bankName\": \"TBI\",\n            \"balance\": 100250\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete card data based on id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/cards/890",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"cards",
+						"890"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "77dd1cd7-f699-416a-9838-e9d94ccbe5ae",
+		"name": "Admin Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Register as Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"city\": \"string\",\r\n  \"country\": \"string\",\r\n  \"createdDateTime\": \"2023-10-07T11:32:40.853Z\",\r\n  \"dob\": \"string\",\r\n  \"email\": \"string\",\r\n  \"firstName\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"imageId\": \"string\",\r\n  \"jwtToken\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"role\": \"ADMIN\",\r\n  \"state\": \"string\",\r\n  \"status\": \"ACTIVE\",\r\n  \"token\": \"string\",\r\n  \"zoneId\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/admin",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

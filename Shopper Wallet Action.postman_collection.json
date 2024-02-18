@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "2c526c26-7312-4a52-8683-992c6c05d476",
+		"name": "Shopper Wallet Action",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Get all Wallet Transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/wallets",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"wallets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

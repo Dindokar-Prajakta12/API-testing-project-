@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "c0d0fcb4-48a8-42f7-a932-4f01d3e66083",
+		"name": "Shopper bank card",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Creates the new card for a given bank",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/cards?bankName=TBI&cardType=CREDIT&email=vaibhavdindokar28@gmail.com&name=vaibhav&shopperId=7757",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "bankName",
+							"value": "TBI"
+						},
+						{
+							"key": "cardType",
+							"value": "CREDIT"
+						},
+						{
+							"key": "email",
+							"value": "vaibhavdindokar28@gmail.com"
+						},
+						{
+							"key": "name",
+							"value": "vaibhav"
+						},
+						{
+							"key": "shopperId",
+							"value": "7757"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Creates the new card for a given bank",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/cards?bankName=TBI&cardType=CREDIT&email=vaibhavdindokar28@gmail.com&name=vaibhav&shopperId=7757",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "bankName",
+									"value": "TBI"
+								},
+								{
+									"key": "cardType",
+									"value": "CREDIT"
+								},
+								{
+									"key": "email",
+									"value": "vaibhavdindokar28@gmail.com"
+								},
+								{
+									"key": "name",
+									"value": "vaibhav"
+								},
+								{
+									"key": "shopperId",
+									"value": "7757"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:17:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Success\",\n    \"data\": {\n        \"cardId\": 890,\n        \"shopperId\": 7757,\n        \"email\": \"vaibhavdindokar28@gmail.com\",\n        \"number\": \"5014401191606589\",\n        \"cardType\": \"CREDIT\",\n        \"cvv\": 250,\n        \"pin\": 6755,\n        \"expiryDate\": \"10/28\",\n        \"nameOnCard\": \"vaibhav\",\n        \"bankName\": \"TBI\",\n        \"balance\": 100000\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Validates bank card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"balance\":100000 ,\r\n  \"bankName\": \"TBI\",\r\n  \"cardId\":890 ,\r\n  \"cardType\": \"CREDIT\",\r\n  \"cvv\": 250,\r\n  \"email\": \"vaibhavdindokar28@gmail.com\",\r\n  \"expiryDate\": \"10/28\",\r\n  \"nameOnCard\": \"vaibhav\",\r\n  \"number\": \"5014401191606589\",\r\n  \"pin\": 6755,\r\n  \"shopperId\": 7757\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/cards/verify",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"cards",
+						"verify"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Validates bank card",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"balance\":100000 ,\r\n  \"bankName\": \"TBI\",\r\n  \"cardId\":890 ,\r\n  \"cardType\": \"CREDIT\",\r\n  \"cvv\": 250,\r\n  \"email\": \"vaibhavdindokar28@gmail.com\",\r\n  \"expiryDate\": \"10/28\",\r\n  \"nameOnCard\": \"vaibhav\",\r\n  \"number\": \"5014401191606589\",\r\n  \"pin\": 6755,\r\n  \"shopperId\": 7757\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/cards/verify",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"cards",
+								"verify"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:21:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"cardId\": 890,\n        \"shopperId\": 7757,\n        \"email\": \"vaibhavdindokar28@gmail.com\",\n        \"number\": \"5014401191606589\",\n        \"cardType\": \"CREDIT\",\n        \"cvv\": 250,\n        \"pin\": 6755,\n        \"expiryDate\": \"10/28\",\n        \"nameOnCard\": \"vaibhav\",\n        \"bankName\": \"TBI\",\n        \"balance\": 100000\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Validates bank card with amount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzI2Mjg4NSwiaWF0IjoxNjk3MjI2ODg1fQ.4HLbQRiMX2e8eT9j0EqIAqJMRLpjGt4F30Tc632GuD4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"balance\": 100000,\r\n  \"bankName\": \"TBI\",\r\n  \"cardId\": 890,\r\n  \"cardType\": \"CREDIT\",\r\n  \"cvv\": 250,\r\n  \"email\": \"vaibhavdindokar28@gmail.com\",\r\n  \"expiryDate\": \"10/28\",\r\n  \"nameOnCard\": \"vaibhav\",\r\n  \"number\": \"5014401191606589\",\r\n  \"pin\": 9755,\r\n  \"shopperId\": 7757\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/cards/transaction?amount=250",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"cards",
+						"transaction"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "250"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update card balance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/cards?amount=250&cardNumber=5014401191606589",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "250"
+						},
+						{
+							"key": "cardNumber",
+							"value": "5014401191606589"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "6ffc3ea2-995e-45cd-af40-22840dca324a",
+		"name": "Shopper Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Register as a shopper",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"city\": \"Shegaon\",\r\n  \"country\": \"india\",\r\n  \"email\": \"vaibhavdindokar28@gmail.com\",\r\n  \"firstName\": \"vaibhav\",\r\n  \"gender\": \"MALE\",\r\n  \"lastName\": \"dindokar\",\r\n  \"password\": \"98765\",\r\n  \"phone\": 8830712541,\r\n  \"state\": \"maharashtra\",\r\n  \"zoneId\": \"ALPHA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers?zoneId=ALPHA",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers"
+					],
+					"query": [
+						{
+							"key": "zoneId",
+							"value": "ALPHA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shopper Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Ok\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vaibhavdindokar28@gmail.com\",\r\n  \"password\": \"98765\",\r\n  \"role\": \"SHOPPER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/users/login",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Shopper Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"vaibhavdindokar28@gmail.com\",\r\n  \"password\": \"98765\",\r\n  \"role\": \"SHOPPER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/users/login",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 Oct 2023 11:11:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"OK\",\n    \"data\": {\n        \"userId\": 7757,\n        \"email\": \"vaibhavdindokar28@gmail.com\",\n        \"role\": \"SHOPPER\",\n        \"status\": \"ACTIVE\",\n        \"createdDateTime\": null,\n        \"firstName\": \"vaibhav\",\n        \"lastName\": \"dindokar\",\n        \"city\": \"pune\",\n        \"state\": \"maharashtra\",\n        \"country\": \"india\",\n        \"zoneId\": \"ALPHA\",\n        \"imageId\": null,\n        \"jwtToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzMxNzg5OSwiaWF0IjoxNjk3MjgxODk5fQ.8rTEIf0HdkkQ_zl2tZEynJaXWWoQyqdNuNpgru9bxCw\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Find Shopper data by shopperId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Ok\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the shopper Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Ok\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"city\": \"pune\",\r\n  \"country\": \"india\",\r\n  \"email\": \"vaibhavdindokar28@gmail.com\",\r\n  \"firstName\": \"vaibhav\",\r\n  \"gender\": \"MALE\",\r\n  \"lastName\": \"dindokar\",\r\n  \"password\": \"98765\",\r\n  \"phone\": 8830712541,\r\n  \"state\": \"maharashtra\",\r\n  \"zoneId\": \"ALPHA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Genarates URL for forgot password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Ok\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "role",
+						"value": "SHOPPER",
+						"type": "text"
+					},
+					{
+						"key": "email",
+						"value": "yashdindokar09@gmail.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/users/forgot-password",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"users",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resets the password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Ok\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzI2Mjg4NSwiaWF0IjoxNjk3MjI2ODg1fQ.4HLbQRiMX2e8eT9j0EqIAqJMRLpjGt4F30Tc632GuD4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"98765\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/users/reset-password",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"users",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set user password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Ok\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "98765",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/users/verify-account?token=lSqQHoarDCTIS2O2pB54zfWzggKKzVMZ4kcKX2ZmYVS5w",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"users",
+						"verify-account"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "lSqQHoarDCTIS2O2pB54zfWzggKKzVMZ4kcKX2ZmYVS5w"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

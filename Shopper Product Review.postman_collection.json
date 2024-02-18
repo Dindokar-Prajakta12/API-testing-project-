@@ -1,0 +1,606 @@
+{
+	"info": {
+		"_postman_id": "9b2a7489-8104-4994-9229-bf5be4e7aa39",
+		"name": "Shopper Product Review",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Add a review to delivered product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dateTime\": \"2023-10-07T05:44:08.520Z\",\r\n  \"description\": \"better but good\",\r\n  \"heading\": \"good\",\r\n  \"rating\": 3,\r\n  \"shopperId\":7757,\r\n  \"shopperName\": \"harsh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/reviews?productId=4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"reviews"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add a review to delivered product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateTime\": \"2023-10-07T05:44:08.520Z\",\r\n  \"description\": \"better but good\",\r\n  \"heading\": \"good\",\r\n  \"rating\": 3,\r\n  \"shopperId\":7757,\r\n  \"shopperName\": \"harsh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/reviews?productId=4",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:12:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"reviewId\": 740,\n        \"shopperId\": 7757,\n        \"shopperName\": \"harsh\",\n        \"heading\": \"good\",\n        \"description\": \"better but good\",\n        \"rating\": 3,\n        \"dateTime\": \"2023-10-12T08:42:20.956804\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all the reviews of a product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/reviews/4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"reviews",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all the reviews of a product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/reviews/4",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"reviews",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:13:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"reviewId\": 422,\n            \"shopperId\": 5604,\n            \"shopperName\": \"Rockstar\",\n            \"heading\": \"Jeans\",\n            \"description\": \"Very Bad Quality\",\n            \"rating\": 2,\n            \"dateTime\": \"2023-10-03T17:04:16.597\"\n        },\n        {\n            \"reviewId\": 588,\n            \"shopperId\": 5625,\n            \"shopperName\": \"string\",\n            \"heading\": \"string\",\n            \"description\": \"string\",\n            \"rating\": 1,\n            \"dateTime\": \"2023-10-04T12:24:22.202\"\n        },\n        {\n            \"reviewId\": 640,\n            \"shopperId\": 6019,\n            \"shopperName\": \"harsh\",\n            \"heading\": \"good\",\n            \"description\": \"better but good\",\n            \"rating\": 3,\n            \"dateTime\": \"2023-10-07T11:20:07.153\"\n        },\n        {\n            \"reviewId\": 673,\n            \"shopperId\": 331,\n            \"shopperName\": \"Jamuna\",\n            \"heading\": \"about quality\",\n            \"description\": \"this is good quality product\",\n            \"rating\": 4,\n            \"dateTime\": \"2023-10-07T18:33:41.114\"\n        },\n        {\n            \"reviewId\": 739,\n            \"shopperId\": 6304,\n            \"shopperName\": \"gayatri\",\n            \"heading\": \"I grt correcy shoes\",\n            \"description\": \"our product is pacles and arrived , quality is good\",\n            \"rating\": 4,\n            \"dateTime\": \"2023-10-11T23:41:24.083\"\n        },\n        {\n            \"reviewId\": 740,\n            \"shopperId\": 7757,\n            \"shopperName\": \"harsh\",\n            \"heading\": \"good\",\n            \"description\": \"better but good\",\n            \"rating\": 3,\n            \"dateTime\": \"2023-10-12T08:42:20.956\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update an added review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dateTime\": \"2023-10-07T05:52:08.250Z\",\r\n  \"description\": \"better and good\",\r\n  \"heading\": \"best\",\r\n  \"rating\": 3,\r\n  \"shopperId\": 6019,\r\n  \"shopperName\": \"harsh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/reviews/422?productId=4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"reviews",
+						"422"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update an added review",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateTime\": \"2023-10-07T05:52:08.250Z\",\r\n  \"description\": \"better and good\",\r\n  \"heading\": \"best\",\r\n  \"rating\": 3,\r\n  \"shopperId\": 6019,\r\n  \"shopperName\": \"harsh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/reviews/422?productId=4",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"reviews",
+								"422"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:14:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"reviewId\": 422,\n        \"shopperId\": 6019,\n        \"shopperName\": \"harsh\",\n        \"heading\": \"best\",\n        \"description\": \"better and good\",\n        \"rating\": 3,\n        \"dateTime\": \"2023-10-12T08:44:02.410795\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete an added review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNoZGluZG9rYXIwOUBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NjY5MjU0NSwiaWF0IjoxNjk2NjU2NTQ1fQ.JpptNVzNrx_UgTIeRWfNYqyr-r1FOeij8bz1ge3-KmM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/reviews/422?productId=4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"reviews",
+						"422"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an added review",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/reviews/422?productId=4",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"reviews",
+								"422"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:14:46 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "https://www.shoppersstack.com/shopping/reviews/422?productId=4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/reviews/422?productId=4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"reviews",
+						"422"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

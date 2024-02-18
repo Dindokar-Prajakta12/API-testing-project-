@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "c204fc7f-15ce-440d-ae57-2073d1b6d136",
+		"name": "Shopper cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Add a product to the cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzMxNzg5OSwiaWF0IjoxNjk3MjgxODk5fQ.8rTEIf0HdkkQ_zl2tZEynJaXWWoQyqdNuNpgru9bxCw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 4,\r\n  \"quantity\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/carts",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the products from the cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/carts",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a product in the cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 4,\r\n  \"quantity\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/carts/14612",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"carts",
+						"14612"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a product from the cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNoZGluZG9rYXIwOUBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NjUyMDM4OCwiaWF0IjoxNjk2NDg0Mzg4fQ.4aO8xRupmrTYkdtKikMPi_PR7UOvmhChTpymtHA2FEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/6019/carts/4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"6019",
+						"carts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

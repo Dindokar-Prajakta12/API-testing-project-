@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "6f3465d2-bfeb-4b61-8ab3-892489434ec7",
+		"name": "Shopper Address related",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Get a particular address by addressId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/address/3248",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"address",
+						"3248"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an added address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"addressId\": 3248,\r\n  \"buildingInfo\": \"near G.M. Temple\",\r\n  \"city\": \"Pune\",\r\n  \"country\": \"India\",\r\n  \"landmark\": \"Pune\",\r\n  \"name\": \"vaibhav\",\r\n  \"phone\": \"7517096590\",\r\n  \"pincode\": \"432102\",\r\n  \"state\": \"Maharashtra\",\r\n  \"streetInfo\": \"FC Road\",\r\n  \"type\": \"Home\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/address/3248",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"address",
+						"3248"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all the address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/address",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add a new address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5NzExNjAwMCwiaWF0IjoxNjk3MDgwMDAwfQ.C1cFqlXTa4TLSNhKCcTW_Gqf6xIT-JCj_IUMCDpa1g0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"addressId\": 0,\r\n  \"buildingInfo\": \"near G.M. Temple\",\r\n  \"city\": \"Pune\",\r\n  \"country\": \"India\",\r\n  \"landmark\": \"Pune\",\r\n  \"name\": \"vaibhav\",\r\n  \"phone\": \"7517096590\",\r\n  \"pincode\": \"432102\",\r\n  \"state\": \"Maharashtra\",\r\n  \"streetInfo\": \"FC ROAD\",\r\n  \"type\": \"Home\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/address",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"7757",
+						"address"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add a new address",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"addressId\": 0,\r\n  \"buildingInfo\": \"near G.M. Temple\",\r\n  \"city\": \"Pune\",\r\n  \"country\": \"India\",\r\n  \"landmark\": \"Pune\",\r\n  \"name\": \"vaibhav\",\r\n  \"phone\": \"7517096590\",\r\n  \"pincode\": \"432102\",\r\n  \"state\": \"Maharashtra\",\r\n  \"streetInfo\": \"FC ROAD\",\r\n  \"type\": \"Home\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.shoppersstack.com/shopping/shoppers/7757/address",
+							"protocol": "https",
+							"host": [
+								"www",
+								"shoppersstack",
+								"com"
+							],
+							"path": [
+								"shopping",
+								"shoppers",
+								"7757",
+								"address"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Oct 2023 03:07:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Created\",\n    \"data\": {\n        \"addressId\": 3713,\n        \"name\": \"vaibhav\",\n        \"type\": \"Home\",\n        \"buildingInfo\": \"near G.M. Temple\",\n        \"streetInfo\": \"FC ROAD\",\n        \"landmark\": \"Pune\",\n        \"city\": \"Pune\",\n        \"state\": \"Maharashtra\",\n        \"country\": \"India\",\n        \"pincode\": \"432102\",\n        \"phone\": \"7517096590\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

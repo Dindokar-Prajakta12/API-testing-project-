@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "882c83d4-29a9-4b84-95eb-4f20be04c8a0",
+		"name": "product view action",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728"
+	},
+	"item": [
+		{
+			"name": "Returns all the default products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/products/alpha",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"products",
+						"alpha"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "return all the product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2ZGluZG9rYXIyOEBnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTY5Njk4MDIzNCwiaWF0IjoxNjk2OTQ0MjM0fQ.KBeyZQANxI_TmJX19InaX84DbBpacssY6-OE9-VMKqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/products/alpha?zoneID=ALPHA",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"products",
+						"alpha"
+					],
+					"query": [
+						{
+							"key": "zoneID",
+							"value": "ALPHA"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
